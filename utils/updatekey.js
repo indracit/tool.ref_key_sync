@@ -27,7 +27,7 @@ const getAdhaarNo = () =>{
             // logEvents(miscount,'synclog.log')
         })
         connection.end();
-        console.log('Database connection closed');
+        // console.log('Database connection closed');
 }
 
 const updateRefKey=(data)=>{
@@ -89,7 +89,7 @@ const updateRefKey=(data)=>{
             logEvents(agecount,'synclog.log')
         })
         connection.end();
-        console.log('Database connection closed');
+        // console.log('Database connection closed');
     }
     
     
