@@ -45,14 +45,14 @@ const updateRefKey=(data)=>{
     logEvents(csvcount,'synclog.log')
 
     for(obj of data){
-        let sql1= `update mis_agentmaster set refkey=${obj['Refkey']} where aadhaarnumber=${obj['aadhaarnumber']}`
+        let sql1= `update mis_agentmaster set refkey=${obj['Refkey']} where aadhaarnumber=${obj['AadharNo']}`
         connection.query(sql1,(error, results, fields) => {
             if (error){
             return console.error(error.message);
             }
         });
 
-        let sql = `update age_agentmaster set refkey=${obj['Refkey']} where aadhaarno=${obj['aadhaarnumber']}`
+        let sql = `update age_agentmaster set refkey=${obj['Refkey']} where aadhaarno=${obj['AadharNo']}`
         connection.query(sql,(error, results, fields) => {
             if (error){
             return console.error(error.message);
@@ -62,7 +62,7 @@ const updateRefKey=(data)=>{
 
     var values = ''
     for(obj of data){
-        values += `${obj['aadhaarnumber']},`
+        values += `${obj['AadharNo']},`
     }
 
     values = values.slice(0, -1);
