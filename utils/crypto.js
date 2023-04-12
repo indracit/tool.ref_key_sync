@@ -1,7 +1,7 @@
 //Checking the crypto module
 const crypto = require('crypto');
 const algorithm = 'aes-128-cbc'; //Using AES encryption
-const key = 'integramicro1234';
+const key = 'indracit1234';
 const iv = Buffer.alloc(16);
 
 
